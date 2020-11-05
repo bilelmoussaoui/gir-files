@@ -7,27 +7,6 @@ and/or use gtk-doc annotations.  -->
   <package name="gtk4"/>
   <c:include name="gsk/gsk.h"/>
   <namespace name="Gsk" version="4.0" shared-library="libgtk-4.so.0" c:identifier-prefixes="Gsk" c:symbol-prefixes="gsk">
-    <function-macro name="BROADWAY_RENDERER" c:identifier="GSK_BROADWAY_RENDERER" introspectable="0">
-      
-      <parameters>
-        <parameter name="obj">
-        </parameter>
-      </parameters>
-    </function-macro>
-    <function-macro name="BROADWAY_RENDERER_CLASS" c:identifier="GSK_BROADWAY_RENDERER_CLASS" introspectable="0">
-      
-      <parameters>
-        <parameter name="klass">
-        </parameter>
-      </parameters>
-    </function-macro>
-    <function-macro name="BROADWAY_RENDERER_GET_CLASS" c:identifier="GSK_BROADWAY_RENDERER_GET_CLASS" introspectable="0">
-      
-      <parameters>
-        <parameter name="obj">
-        </parameter>
-      </parameters>
-    </function-macro>
     <enumeration name="BlendMode" glib:type-name="GskBlendMode" glib:get-type="gsk_blend_mode_get_type" c:type="GskBlendMode">
       <doc xml:space="preserve">The blend modes available for render nodes.
 
@@ -279,27 +258,6 @@ colors.</doc>
         </parameters>
       </method>
     </class>
-    <class name="BroadwayRenderer" c:symbol-prefix="broadway_renderer" c:type="GskBroadwayRenderer" parent="Renderer" glib:type-name="GskBroadwayRenderer" glib:get-type="gsk_broadway_renderer_get_type" glib:type-struct="BroadwayRendererClass">
-      
-      <constructor name="new" c:identifier="gsk_broadway_renderer_new">
-        <doc xml:space="preserve">Creates a new Broadway renderer.
-
-The Broadway renderer is the default renderer for the broadway backend.
-It will only work with broadway surfaces, otherwise it will fail the
-call to gsk_renderer_realize().
-
-This function is only available when GTK was compiled with Broadway
-support.</doc>
-        
-        <return-value transfer-ownership="full">
-          <doc xml:space="preserve">a new Broadway renderer.</doc>
-          <type name="Renderer" c:type="GskRenderer*"/>
-        </return-value>
-      </constructor>
-    </class>
-    <record name="BroadwayRendererClass" c:type="GskBroadwayRendererClass" disguised="1" glib:is-gtype-struct-for="BroadwayRenderer">
-      
-    </record>
     <function-macro name="CAIRO_RENDERER" c:identifier="GSK_CAIRO_RENDERER" introspectable="0">
       
       <parameters>
@@ -1533,20 +1491,6 @@ CSS describes transforms.
 This means code can safely expose them as properties of objects without
 having to worry about others changing them.</doc>
     </docsection>
-    <function-macro name="IS_BROADWAY_RENDERER" c:identifier="GSK_IS_BROADWAY_RENDERER" introspectable="0">
-      
-      <parameters>
-        <parameter name="obj">
-        </parameter>
-      </parameters>
-    </function-macro>
-    <function-macro name="IS_BROADWAY_RENDERER_CLASS" c:identifier="GSK_IS_BROADWAY_RENDERER_CLASS" introspectable="0">
-      
-      <parameters>
-        <parameter name="klass">
-        </parameter>
-      </parameters>
-    </function-macro>
     <function-macro name="IS_CAIRO_RENDERER" c:identifier="GSK_IS_CAIRO_RENDERER" introspectable="0">
       
       <parameters>
@@ -1586,20 +1530,6 @@ having to worry about others changing them.</doc>
       
       <parameters>
         <parameter name="obj">
-        </parameter>
-      </parameters>
-    </function-macro>
-    <function-macro name="IS_VULKAN_RENDERER" c:identifier="GSK_IS_VULKAN_RENDERER" introspectable="0">
-      
-      <parameters>
-        <parameter name="obj">
-        </parameter>
-      </parameters>
-    </function-macro>
-    <function-macro name="IS_VULKAN_RENDERER_CLASS" c:identifier="GSK_IS_VULKAN_RENDERER_CLASS" introspectable="0">
-      
-      <parameters>
-        <parameter name="klass">
         </parameter>
       </parameters>
     </function-macro>
@@ -2003,7 +1933,7 @@ during deserialization of node data.</doc>
       <parameters>
         <parameter name="section" transfer-ownership="none">
           <doc xml:space="preserve">the #GtkCssSection where the error occurred</doc>
-          <type c:type="gconstpointer" name="gconstpointer"/>
+          <type c:type="const GtkCssSection*"/>
         </parameter>
         <parameter name="error" transfer-ownership="none">
           <doc xml:space="preserve">the error</doc>
@@ -4149,39 +4079,6 @@ with the given @transform.</doc>
         </parameters>
       </method>
     </class>
-    <function-macro name="VULKAN_RENDERER" c:identifier="GSK_VULKAN_RENDERER" introspectable="0">
-      
-      <parameters>
-        <parameter name="obj">
-        </parameter>
-      </parameters>
-    </function-macro>
-    <function-macro name="VULKAN_RENDERER_CLASS" c:identifier="GSK_VULKAN_RENDERER_CLASS" introspectable="0">
-      
-      <parameters>
-        <parameter name="klass">
-        </parameter>
-      </parameters>
-    </function-macro>
-    <function-macro name="VULKAN_RENDERER_GET_CLASS" c:identifier="GSK_VULKAN_RENDERER_GET_CLASS" introspectable="0">
-      
-      <parameters>
-        <parameter name="obj">
-        </parameter>
-      </parameters>
-    </function-macro>
-    <class name="VulkanRenderer" c:symbol-prefix="vulkan_renderer" c:type="GskVulkanRenderer" parent="Renderer" glib:type-name="GskVulkanRenderer" glib:get-type="gsk_vulkan_renderer_get_type" glib:type-struct="VulkanRendererClass">
-      
-      <constructor name="new" c:identifier="gsk_vulkan_renderer_new">
-        
-        <return-value transfer-ownership="full">
-          <type name="Renderer" c:type="GskRenderer*"/>
-        </return-value>
-      </constructor>
-    </class>
-    <record name="VulkanRendererClass" c:type="GskVulkanRendererClass" disguised="1" glib:is-gtype-struct-for="VulkanRenderer">
-      
-    </record>
     <function name="serialization_error_quark" c:identifier="gsk_serialization_error_quark" moved-to="SerializationError.quark">
       <return-value transfer-ownership="none">
         <type name="GLib.Quark" c:type="GQuark"/>
