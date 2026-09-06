@@ -1,11 +1,12 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <include name="GObject" version="2.0"/>
   <package name="atk"/>
   <c:include name="atk/atk.h"/>
+  <doc:format name="unknown"/>
   <namespace name="Atk" version="1.0" shared-library="libatk-1.0.so.0" c:identifier-prefixes="Atk" c:symbol-prefixes="atk">
     <alias name="AttributeSet" c:type="AtkAttributeSet">
       <doc xml:space="preserve">This is a singly-linked list (a #GSList) of #AtkAttribute. It is
@@ -553,7 +554,7 @@ A string name/value pair representing a generic attribute.</doc>
         </parameters>
       </function>
     </record>
-    <constant name="BINARY_AGE" value="25512" c:type="ATK_BINARY_AGE" version="2.7.4">
+    <constant name="BINARY_AGE" value="26200" c:type="ATK_BINARY_AGE" version="2.7.4">
       <doc xml:space="preserve">Like atk_get_binary_age(), but from the headers used at
 application compile time, rather than from the library linked
 against at application run time.</doc>
@@ -4721,13 +4722,13 @@ application compile time, rather than from the library linked
 against at application run time.</doc>
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="MICRO_VERSION" value="2" c:type="ATK_MICRO_VERSION" version="2.7.4">
+    <constant name="MICRO_VERSION" value="90" c:type="ATK_MICRO_VERSION" version="2.7.4">
       <doc xml:space="preserve">Like atk_get_micro_version(), but from the headers used at
 application compile time, rather than from the library linked
 against at application run time.</doc>
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="MINOR_VERSION" value="55" c:type="ATK_MINOR_VERSION" version="2.7.4">
+    <constant name="MINOR_VERSION" value="61" c:type="ATK_MINOR_VERSION" version="2.7.4">
       <doc xml:space="preserve">Like atk_get_minor_version(), but from the headers used at
 application compile time, rather than from the library linked
 against at application run time.</doc>
@@ -7482,29 +7483,31 @@ object provides descriptive information about the target object(s). See also
         <doc xml:space="preserve">Indicates an object is a cell in a treetable and is expanded to display other cells in the same column.</doc>
       </member>
       <member name="details" value="17" c:identifier="ATK_RELATION_DETAILS" glib:nick="details" glib:name="ATK_RELATION_DETAILS">
-        <doc xml:space="preserve">Reciprocal of %ATK_RELATION_DETAILS_FOR. Indicates that this object
-has a detailed or extended description, the contents of which can be found in the target
-object(s). This relation type is most appropriate for information that is sufficiently
-lengthy as to make navigation to the container of that information desirable. For less
-verbose information suitable for announcement only, see %ATK_RELATION_DESCRIBED_BY. If
-the detailed information describes an error condition, %ATK_RELATION_ERROR_FOR should be
-used instead. @Since: ATK-2.26.</doc>
+        <doc xml:space="preserve">Reciprocal of %ATK_RELATION_DETAILS_FOR. Indicates that this object has a
+detailed or extended description, the contents of which can be found in the
+target object(s). This relation type is most appropriate for information
+that is sufficiently lengthy as to make navigation to the container of that
+information desirable. For less verbose information suitable for
+announcement only, see %ATK_RELATION_DESCRIBED_BY. If the detailed
+information describes an error condition, %ATK_RELATION_ERROR_FOR should be
+used instead.</doc>
+        <doc-version xml:space="preserve">ATK-2.26.</doc-version>
       </member>
-      <member name="details_for" value="18" c:identifier="ATK_RELATION_DETAILS_FOR" glib:nick="details-for" glib:name="ATK_RELATION_DETAILS_FOR">
-        <doc xml:space="preserve">Reciprocal of %ATK_RELATION_DETAILS. Indicates that this object
-provides a detailed or extended description about the target object(s). See also
-%ATK_RELATION_DESCRIPTION_FOR and %ATK_RELATION_ERROR_FOR. @Since: ATK-2.26.</doc>
+      <member name="details_for" value="18" c:identifier="ATK_RELATION_DETAILS_FOR" version="2.26" glib:nick="details-for" glib:name="ATK_RELATION_DETAILS_FOR">
+        <doc xml:space="preserve">Reciprocal of %ATK_RELATION_DETAILS. Indicates that this object provides a
+detailed or extended description about the target object(s). See also
+%ATK_RELATION_DESCRIPTION_FOR and %ATK_RELATION_ERROR_FOR.</doc>
       </member>
-      <member name="error_message" value="19" c:identifier="ATK_RELATION_ERROR_MESSAGE" glib:nick="error-message" glib:name="ATK_RELATION_ERROR_MESSAGE">
-        <doc xml:space="preserve">Reciprocal of %ATK_RELATION_ERROR_FOR. Indicates that this object
-has one or more errors, the nature of which is described in the contents of the target
-object(s). Objects that have this relation type should also contain %ATK_STATE_INVALID_ENTRY
-in their #AtkStateSet. @Since: ATK-2.26.</doc>
+      <member name="error_message" value="19" c:identifier="ATK_RELATION_ERROR_MESSAGE" version="2.26" glib:nick="error-message" glib:name="ATK_RELATION_ERROR_MESSAGE">
+        <doc xml:space="preserve">Reciprocal of %ATK_RELATION_ERROR_FOR. Indicates that this object has one or
+more errors, the nature of which is described in the contents of the target
+object(s). Objects that have this relation type should also contain
+%ATK_STATE_INVALID_ENTRY in their #AtkStateSet.</doc>
       </member>
-      <member name="error_for" value="20" c:identifier="ATK_RELATION_ERROR_FOR" glib:nick="error-for" glib:name="ATK_RELATION_ERROR_FOR">
+      <member name="error_for" value="20" c:identifier="ATK_RELATION_ERROR_FOR" version="2.26" glib:nick="error-for" glib:name="ATK_RELATION_ERROR_FOR">
         <doc xml:space="preserve">Reciprocal of %ATK_RELATION_ERROR_MESSAGE. Indicates that this object
-contains an error message describing an invalid condition in the target object(s). @Since:
-ATK_2.26.</doc>
+contains an error message describing an invalid condition in the target
+object(s).</doc>
       </member>
       <member name="last_defined" value="21" c:identifier="ATK_RELATION_LAST_DEFINED" glib:nick="last-defined" glib:name="ATK_RELATION_LAST_DEFINED">
         <doc xml:space="preserve">Not used, this value indicates the end of the enumeration.</doc>
@@ -7733,8 +7736,8 @@ in ATK.  Other roles may be added at runtime, so an AtkRole &gt;=
       <member name="tear_off_menu_item" value="58" c:identifier="ATK_ROLE_TEAR_OFF_MENU_ITEM" glib:nick="tear-off-menu-item" glib:name="ATK_ROLE_TEAR_OFF_MENU_ITEM">
         <doc xml:space="preserve">A menu item used to tear off and reattach its menu</doc>
       </member>
-      <member name="terminal" value="59" c:identifier="ATK_ROLE_TERMINAL" glib:nick="terminal" glib:name="ATK_ROLE_TERMINAL">
-        <doc xml:space="preserve">An object that represents an accessible terminal.  (Since: 0.6)</doc>
+      <member name="terminal" value="59" c:identifier="ATK_ROLE_TERMINAL" version="0.6" glib:nick="terminal" glib:name="ATK_ROLE_TERMINAL">
+        <doc xml:space="preserve">An object that represents an accessible terminal.</doc>
       </member>
       <member name="text" value="60" c:identifier="ATK_ROLE_TEXT" glib:nick="text" glib:name="ATK_ROLE_TEXT">
         <doc xml:space="preserve">An interactive widget that supports multiple lines of text and
@@ -7757,8 +7760,9 @@ textual information, see ATK_ROLE_STATIC.</doc>
       <member name="tree" value="64" c:identifier="ATK_ROLE_TREE" glib:nick="tree" glib:name="ATK_ROLE_TREE">
         <doc xml:space="preserve">An object used to represent hierarchical information to the user</doc>
       </member>
-      <member name="tree_table" value="65" c:identifier="ATK_ROLE_TREE_TABLE" glib:nick="tree-table" glib:name="ATK_ROLE_TREE_TABLE">
-        <doc xml:space="preserve">An object capable of expanding and collapsing rows as well as showing multiple columns of data.   (Since: 0.7)</doc>
+      <member name="tree_table" value="65" c:identifier="ATK_ROLE_TREE_TABLE" version="0.7" glib:nick="tree-table" glib:name="ATK_ROLE_TREE_TABLE">
+        <doc xml:space="preserve">An object capable of expanding and collapsing rows as well as showing
+multiple columns of data.</doc>
       </member>
       <member name="unknown" value="66" c:identifier="ATK_ROLE_UNKNOWN" glib:nick="unknown" glib:name="ATK_ROLE_UNKNOWN">
         <doc xml:space="preserve">The object contains some Accessible information, but its role is not known</doc>
@@ -7769,191 +7773,212 @@ textual information, see ATK_ROLE_STATIC.</doc>
       <member name="window" value="68" c:identifier="ATK_ROLE_WINDOW" glib:nick="window" glib:name="ATK_ROLE_WINDOW">
         <doc xml:space="preserve">A top level window with no title or border.</doc>
       </member>
-      <member name="header" value="69" c:identifier="ATK_ROLE_HEADER" glib:nick="header" glib:name="ATK_ROLE_HEADER">
-        <doc xml:space="preserve">An object that serves as a document header. (Since: 1.1.1)</doc>
+      <member name="header" value="69" c:identifier="ATK_ROLE_HEADER" version="1.1.1" glib:nick="header" glib:name="ATK_ROLE_HEADER">
+        <doc xml:space="preserve">An object that serves as a document header.</doc>
       </member>
-      <member name="footer" value="70" c:identifier="ATK_ROLE_FOOTER" glib:nick="footer" glib:name="ATK_ROLE_FOOTER">
-        <doc xml:space="preserve">An object that serves as a document footer.  (Since: 1.1.1)</doc>
+      <member name="footer" value="70" c:identifier="ATK_ROLE_FOOTER" version="1.1.1" glib:nick="footer" glib:name="ATK_ROLE_FOOTER">
+        <doc xml:space="preserve">An object that serves as a document footer.</doc>
       </member>
-      <member name="paragraph" value="71" c:identifier="ATK_ROLE_PARAGRAPH" glib:nick="paragraph" glib:name="ATK_ROLE_PARAGRAPH">
-        <doc xml:space="preserve">An object which is contains a paragraph of text content.   (Since: 1.1.1)</doc>
+      <member name="paragraph" value="71" c:identifier="ATK_ROLE_PARAGRAPH" version="1.1.1" glib:nick="paragraph" glib:name="ATK_ROLE_PARAGRAPH">
+        <doc xml:space="preserve">An object which contains a paragraph of text content.</doc>
       </member>
-      <member name="ruler" value="72" c:identifier="ATK_ROLE_RULER" glib:nick="ruler" glib:name="ATK_ROLE_RULER">
-        <doc xml:space="preserve">An object which describes margins and tab stops, etc. for text objects which it controls (should have CONTROLLER_FOR relation to such).   (Since: 1.1.1)</doc>
+      <member name="ruler" value="72" c:identifier="ATK_ROLE_RULER" version="1.1.1" glib:nick="ruler" glib:name="ATK_ROLE_RULER">
+        <doc xml:space="preserve">An object which describes margins and tab stops, etc. for text objects
+which it controls (should have CONTROLLER_FOR relation to such).</doc>
       </member>
-      <member name="application" value="73" c:identifier="ATK_ROLE_APPLICATION" glib:nick="application" glib:name="ATK_ROLE_APPLICATION">
-        <doc xml:space="preserve">The object is an application object, which may contain @ATK_ROLE_FRAME objects or other types of accessibles.  The root accessible of any application's ATK hierarchy should have ATK_ROLE_APPLICATION.   (Since: 1.1.4)</doc>
+      <member name="application" value="73" c:identifier="ATK_ROLE_APPLICATION" version="1.1.4" glib:nick="application" glib:name="ATK_ROLE_APPLICATION">
+        <doc xml:space="preserve">The object is an application object, which may contain @ATK_ROLE_FRAME
+objects or other types of accessibles.  The root accessible of any
+application's ATK hierarchy should have ATK_ROLE_APPLICATION.</doc>
       </member>
-      <member name="autocomplete" value="74" c:identifier="ATK_ROLE_AUTOCOMPLETE" glib:nick="autocomplete" glib:name="ATK_ROLE_AUTOCOMPLETE">
-        <doc xml:space="preserve">The object is a dialog or list containing items for insertion into an entry widget, for instance a list of words for completion of a text entry.   (Since: 1.3)</doc>
+      <member name="autocomplete" value="74" c:identifier="ATK_ROLE_AUTOCOMPLETE" version="1.3" glib:nick="autocomplete" glib:name="ATK_ROLE_AUTOCOMPLETE">
+        <doc xml:space="preserve">The object is a dialog or list containing items for insertion into an entry
+widget, for instance a list of words for completion of a text entry.</doc>
       </member>
-      <member name="edit_bar" value="75" c:identifier="ATK_ROLE_EDITBAR" glib:nick="edit-bar" glib:name="ATK_ROLE_EDITBAR">
-        <doc xml:space="preserve">The object is an editable text object in a toolbar.  (Since: 1.5)</doc>
+      <member name="edit_bar" value="75" c:identifier="ATK_ROLE_EDITBAR" version="1.5" glib:nick="edit-bar" glib:name="ATK_ROLE_EDITBAR">
+        <doc xml:space="preserve">The object is an editable text object in a toolbar.</doc>
       </member>
-      <member name="embedded" value="76" c:identifier="ATK_ROLE_EMBEDDED" glib:nick="embedded" glib:name="ATK_ROLE_EMBEDDED">
-        <doc xml:space="preserve">The object is an embedded container within a document or panel.  This role is a grouping "hint" indicating that the contained objects share a context.  (Since: 1.7.2)</doc>
+      <member name="embedded" value="76" c:identifier="ATK_ROLE_EMBEDDED" version="1.7.2" glib:nick="embedded" glib:name="ATK_ROLE_EMBEDDED">
+        <doc xml:space="preserve">The object is an embedded container within a document or panel.  This role
+is a grouping "hint" indicating that the contained objects share a context.</doc>
       </member>
-      <member name="entry" value="77" c:identifier="ATK_ROLE_ENTRY" glib:nick="entry" glib:name="ATK_ROLE_ENTRY">
-        <doc xml:space="preserve">The object is a component whose textual content may be entered or modified by the user, provided @ATK_STATE_EDITABLE is present.   (Since: 1.11)</doc>
+      <member name="entry" value="77" c:identifier="ATK_ROLE_ENTRY" version="1.11" glib:nick="entry" glib:name="ATK_ROLE_ENTRY">
+        <doc xml:space="preserve">The object is a component whose textual content may be entered or modified
+by the user, provided @ATK_STATE_EDITABLE is present.</doc>
       </member>
-      <member name="chart" value="78" c:identifier="ATK_ROLE_CHART" glib:nick="chart" glib:name="ATK_ROLE_CHART">
-        <doc xml:space="preserve">The object is a graphical depiction of quantitative data. It may contain multiple subelements whose attributes and/or description may be queried to obtain both the quantitative data and information about how the data is being presented. The LABELLED_BY relation is particularly important in interpreting objects of this type, as is the accessible-description property.  (Since: 1.11)</doc>
+      <member name="chart" value="78" c:identifier="ATK_ROLE_CHART" version="1.11" glib:nick="chart" glib:name="ATK_ROLE_CHART">
+        <doc xml:space="preserve">The object is a graphical depiction of quantitative data. It may contain
+multiple subelements whose attributes and/or description may be queried to
+obtain both the quantitative data and information about how the data is
+being presented. The LABELLED_BY relation is particularly important in
+interpreting objects of this type, as is the accessible-description
+property.</doc>
       </member>
-      <member name="caption" value="79" c:identifier="ATK_ROLE_CAPTION" glib:nick="caption" glib:name="ATK_ROLE_CAPTION">
-        <doc xml:space="preserve">The object contains descriptive information, usually textual, about another user interface element such as a table, chart, or image.  (Since: 1.11)</doc>
+      <member name="caption" value="79" c:identifier="ATK_ROLE_CAPTION" version="1.11" glib:nick="caption" glib:name="ATK_ROLE_CAPTION">
+        <doc xml:space="preserve">The object contains descriptive information, usually textual, about another
+user interface element such as a table, chart, or image.</doc>
       </member>
-      <member name="document_frame" value="80" c:identifier="ATK_ROLE_DOCUMENT_FRAME" glib:nick="document-frame" glib:name="ATK_ROLE_DOCUMENT_FRAME">
-        <doc xml:space="preserve">The object is a visual frame or container which contains a view of document content. Document frames may occur within another Document instance, in which case the second document may be said to be embedded in the containing instance. HTML frames are often ROLE_DOCUMENT_FRAME. Either this object, or a singleton descendant, should implement the Document interface.  (Since: 1.11)</doc>
+      <member name="document_frame" value="80" c:identifier="ATK_ROLE_DOCUMENT_FRAME" version="1.11" glib:nick="document-frame" glib:name="ATK_ROLE_DOCUMENT_FRAME">
+        <doc xml:space="preserve">The object is a visual frame or container which contains a view of document
+content. Document frames may occur within another Document instance, in
+which case the second document may be said to be embedded in the containing
+instance. HTML frames are often ROLE_DOCUMENT_FRAME. Either this object, or
+a singleton descendant, should implement the Document interface.</doc>
       </member>
       <member name="heading" value="81" c:identifier="ATK_ROLE_HEADING" glib:nick="heading" glib:name="ATK_ROLE_HEADING">
-        <doc xml:space="preserve">The object serves as a heading for content which follows it in a document. The 'heading level' of the heading, if availabe, may be obtained by querying the object's attributes.</doc>
+        <doc xml:space="preserve">The object serves as a heading for content which follows it in a document. The 'heading level' of the heading, if available, may be obtained by querying the object's attributes.</doc>
       </member>
-      <member name="page" value="82" c:identifier="ATK_ROLE_PAGE" glib:nick="page" glib:name="ATK_ROLE_PAGE">
-        <doc xml:space="preserve">The object is a containing instance which encapsulates a page of information. @ATK_ROLE_PAGE is used in documents and content which support a paginated navigation model.  (Since: 1.11)</doc>
+      <member name="page" value="82" c:identifier="ATK_ROLE_PAGE" version="1.11" glib:nick="page" glib:name="ATK_ROLE_PAGE">
+        <doc xml:space="preserve">The object is a containing instance which encapsulates a page of
+information. @ATK_ROLE_PAGE is used in documents and content which support a
+paginated navigation model.</doc>
       </member>
-      <member name="section" value="83" c:identifier="ATK_ROLE_SECTION" glib:nick="section" glib:name="ATK_ROLE_SECTION">
-        <doc xml:space="preserve">The object is a containing instance of document content which constitutes a particular 'logical' section of the document. The type of content within a section, and the nature of the section division itself, may be obtained by querying the object's attributes. Sections may be nested. (Since: 1.11)</doc>
+      <member name="section" value="83" c:identifier="ATK_ROLE_SECTION" version="1.11" glib:nick="section" glib:name="ATK_ROLE_SECTION">
+        <doc xml:space="preserve">The object is a containing instance of document content which constitutes a
+particular 'logical' section of the document. The type of content within a
+section, and the nature of the section division itself, may be obtained by
+querying the object's attributes. Sections may be nested.</doc>
       </member>
-      <member name="redundant_object" value="84" c:identifier="ATK_ROLE_REDUNDANT_OBJECT" glib:nick="redundant-object" glib:name="ATK_ROLE_REDUNDANT_OBJECT">
-        <doc xml:space="preserve">The object is redundant with another object in the hierarchy, and is exposed for purely technical reasons.  Objects of this role should normally be ignored by clients. (Since: 1.11)</doc>
+      <member name="redundant_object" value="84" c:identifier="ATK_ROLE_REDUNDANT_OBJECT" version="1.11" glib:nick="redundant-object" glib:name="ATK_ROLE_REDUNDANT_OBJECT">
+        <doc xml:space="preserve">The object is redundant with another object in the hierarchy, and is
+exposed for purely technical reasons.  Objects of this role should normally
+be ignored by clients.</doc>
       </member>
-      <member name="form" value="85" c:identifier="ATK_ROLE_FORM" glib:nick="form" glib:name="ATK_ROLE_FORM">
-        <doc xml:space="preserve">The object is a container for form controls, for instance as part of a
-web form or user-input form within a document.  This role is primarily a tag/convenience for
-clients when navigating complex documents, it is not expected that ordinary GUI containers will
-always have ATK_ROLE_FORM. (Since: 1.12.0)</doc>
+      <member name="form" value="85" c:identifier="ATK_ROLE_FORM" version="1.12.0" glib:nick="form" glib:name="ATK_ROLE_FORM">
+        <doc xml:space="preserve">The object is a container for form controls, for instance as part of a web
+form or user-input form within a document.  This role is primarily a
+tag/convenience for clients when navigating complex documents, it is not
+expected that ordinary GUI containers will always have ATK_ROLE_FORM.</doc>
       </member>
-      <member name="link" value="86" c:identifier="ATK_ROLE_LINK" glib:nick="link" glib:name="ATK_ROLE_LINK">
-        <doc xml:space="preserve">The object is a hypertext anchor, i.e. a "link" in a
-hypertext document.  Such objects are distinct from 'inline'
-content which may also use the Hypertext/Hyperlink interfaces
-to indicate the range/location within a text object where
-an inline or embedded object lies.  (Since: 1.12.1)</doc>
+      <member name="link" value="86" c:identifier="ATK_ROLE_LINK" version="1.12.1" glib:nick="link" glib:name="ATK_ROLE_LINK">
+        <doc xml:space="preserve">The object is a hypertext anchor, i.e. a "link" in a hypertext document.
+Such objects are distinct from 'inline' content which may also use the
+Hypertext/Hyperlink interfaces to indicate the range/location within a text
+object where an inline or embedded object lies.</doc>
       </member>
-      <member name="input_method_window" value="87" c:identifier="ATK_ROLE_INPUT_METHOD_WINDOW" glib:nick="input-method-window" glib:name="ATK_ROLE_INPUT_METHOD_WINDOW">
-        <doc xml:space="preserve">The object is a window or similar viewport
-which is used to allow composition or input of a 'complex character',
-in other words it is an "input method window." (Since: 1.12.1)</doc>
+      <member name="input_method_window" value="87" c:identifier="ATK_ROLE_INPUT_METHOD_WINDOW" version="1.12.1" glib:nick="input-method-window" glib:name="ATK_ROLE_INPUT_METHOD_WINDOW">
+        <doc xml:space="preserve">The object is a window or similar viewport which is used to allow
+composition or input of a 'complex character', in other words it is an
+"input method window."</doc>
       </member>
-      <member name="table_row" value="88" c:identifier="ATK_ROLE_TABLE_ROW" glib:nick="table-row" glib:name="ATK_ROLE_TABLE_ROW">
-        <doc xml:space="preserve">A row in a table.  (Since: 2.1.0)</doc>
+      <member name="table_row" value="88" c:identifier="ATK_ROLE_TABLE_ROW" version="2.1.0" glib:nick="table-row" glib:name="ATK_ROLE_TABLE_ROW">
+        <doc xml:space="preserve">A row in a table.</doc>
       </member>
-      <member name="tree_item" value="89" c:identifier="ATK_ROLE_TREE_ITEM" glib:nick="tree-item" glib:name="ATK_ROLE_TREE_ITEM">
-        <doc xml:space="preserve">An object that represents an element of a tree.  (Since: 2.1.0)</doc>
+      <member name="tree_item" value="89" c:identifier="ATK_ROLE_TREE_ITEM" version="2.1.0" glib:nick="tree-item" glib:name="ATK_ROLE_TREE_ITEM">
+        <doc xml:space="preserve">An object that represents an element of a tree.</doc>
       </member>
-      <member name="document_spreadsheet" value="90" c:identifier="ATK_ROLE_DOCUMENT_SPREADSHEET" glib:nick="document-spreadsheet" glib:name="ATK_ROLE_DOCUMENT_SPREADSHEET">
-        <doc xml:space="preserve">A document frame which contains a spreadsheet.  (Since: 2.1.0)</doc>
+      <member name="document_spreadsheet" value="90" c:identifier="ATK_ROLE_DOCUMENT_SPREADSHEET" version="2.1.0" glib:nick="document-spreadsheet" glib:name="ATK_ROLE_DOCUMENT_SPREADSHEET">
+        <doc xml:space="preserve">A document frame which contains a spreadsheet.</doc>
       </member>
-      <member name="document_presentation" value="91" c:identifier="ATK_ROLE_DOCUMENT_PRESENTATION" glib:nick="document-presentation" glib:name="ATK_ROLE_DOCUMENT_PRESENTATION">
-        <doc xml:space="preserve">A document frame which contains a presentation or slide content.  (Since: 2.1.0)</doc>
+      <member name="document_presentation" value="91" c:identifier="ATK_ROLE_DOCUMENT_PRESENTATION" version="2.1.0" glib:nick="document-presentation" glib:name="ATK_ROLE_DOCUMENT_PRESENTATION">
+        <doc xml:space="preserve">A document frame which contains a presentation or slide content.</doc>
       </member>
-      <member name="document_text" value="92" c:identifier="ATK_ROLE_DOCUMENT_TEXT" glib:nick="document-text" glib:name="ATK_ROLE_DOCUMENT_TEXT">
-        <doc xml:space="preserve">A document frame which contains textual content, such as found in a word processing application.  (Since: 2.1.0)</doc>
+      <member name="document_text" value="92" c:identifier="ATK_ROLE_DOCUMENT_TEXT" version="2.1.0" glib:nick="document-text" glib:name="ATK_ROLE_DOCUMENT_TEXT">
+        <doc xml:space="preserve">A document frame which contains textual content, such as found in a word
+processing application.</doc>
       </member>
-      <member name="document_web" value="93" c:identifier="ATK_ROLE_DOCUMENT_WEB" glib:nick="document-web" glib:name="ATK_ROLE_DOCUMENT_WEB">
-        <doc xml:space="preserve">A document frame which contains HTML or other markup suitable for display in a web browser.  (Since: 2.1.0)</doc>
+      <member name="document_web" value="93" c:identifier="ATK_ROLE_DOCUMENT_WEB" version="2.1.0" glib:nick="document-web" glib:name="ATK_ROLE_DOCUMENT_WEB">
+        <doc xml:space="preserve">A document frame which contains HTML or other markup suitable for display
+in a web browser.</doc>
       </member>
-      <member name="document_email" value="94" c:identifier="ATK_ROLE_DOCUMENT_EMAIL" glib:nick="document-email" glib:name="ATK_ROLE_DOCUMENT_EMAIL">
-        <doc xml:space="preserve">A document frame which contains email content to be displayed or composed either in plain text or HTML.  (Since: 2.1.0)</doc>
+      <member name="document_email" value="94" c:identifier="ATK_ROLE_DOCUMENT_EMAIL" version="2.1.0" glib:nick="document-email" glib:name="ATK_ROLE_DOCUMENT_EMAIL">
+        <doc xml:space="preserve">A document frame which contains email content to be displayed or composed
+either in plain text or HTML.</doc>
       </member>
-      <member name="comment" value="95" c:identifier="ATK_ROLE_COMMENT" glib:nick="comment" glib:name="ATK_ROLE_COMMENT">
-        <doc xml:space="preserve">An object found within a document and designed to present a comment, note, or other annotation. In some cases, this object might not be visible until activated.  (Since: 2.1.0)</doc>
+      <member name="comment" value="95" c:identifier="ATK_ROLE_COMMENT" version="2.1.0" glib:nick="comment" glib:name="ATK_ROLE_COMMENT">
+        <doc xml:space="preserve">An object found within a document and designed to present a comment, note,
+or other annotation. In some cases, this object might not be visible until
+activated.</doc>
       </member>
-      <member name="list_box" value="96" c:identifier="ATK_ROLE_LIST_BOX" glib:nick="list-box" glib:name="ATK_ROLE_LIST_BOX">
-        <doc xml:space="preserve">A non-collapsible list of choices the user can select from. (Since: 2.1.0)</doc>
+      <member name="list_box" value="96" c:identifier="ATK_ROLE_LIST_BOX" version="2.1.0" glib:nick="list-box" glib:name="ATK_ROLE_LIST_BOX">
+        <doc xml:space="preserve">A non-collapsible list of choices the user can select from.</doc>
       </member>
-      <member name="grouping" value="97" c:identifier="ATK_ROLE_GROUPING" glib:nick="grouping" glib:name="ATK_ROLE_GROUPING">
-        <doc xml:space="preserve">A group of related widgets. This group typically has a label. (Since: 2.1.0)</doc>
+      <member name="grouping" value="97" c:identifier="ATK_ROLE_GROUPING" version="2.1.0" glib:nick="grouping" glib:name="ATK_ROLE_GROUPING">
+        <doc xml:space="preserve">A group of related widgets. This group typically has a label.</doc>
       </member>
-      <member name="image_map" value="98" c:identifier="ATK_ROLE_IMAGE_MAP" glib:nick="image-map" glib:name="ATK_ROLE_IMAGE_MAP">
-        <doc xml:space="preserve">An image map object. Usually a graphic with multiple hotspots, where each hotspot can be activated resulting in the loading of another document or section of a document. (Since: 2.1.0)</doc>
+      <member name="image_map" value="98" c:identifier="ATK_ROLE_IMAGE_MAP" version="2.1.0" glib:nick="image-map" glib:name="ATK_ROLE_IMAGE_MAP">
+        <doc xml:space="preserve">An image map object. Usually a graphic with multiple hotspots, where
+each hotspot can be activated resulting in the loading of another
+document or section of a document.</doc>
       </member>
-      <member name="notification" value="99" c:identifier="ATK_ROLE_NOTIFICATION" glib:nick="notification" glib:name="ATK_ROLE_NOTIFICATION">
-        <doc xml:space="preserve">A transitory object designed to present a message to the user, typically at the desktop level rather than inside a particular application.  (Since: 2.1.0)</doc>
+      <member name="notification" value="99" c:identifier="ATK_ROLE_NOTIFICATION" version="2.1.0" glib:nick="notification" glib:name="ATK_ROLE_NOTIFICATION">
+        <doc xml:space="preserve">A transitory object designed to present a message to the user, typically
+at the desktop level rather than inside a particular application.</doc>
       </member>
-      <member name="info_bar" value="100" c:identifier="ATK_ROLE_INFO_BAR" glib:nick="info-bar" glib:name="ATK_ROLE_INFO_BAR">
-        <doc xml:space="preserve">An object designed to present a message to the user within an existing window. (Since: 2.1.0)</doc>
+      <member name="info_bar" value="100" c:identifier="ATK_ROLE_INFO_BAR" version="2.1.0" glib:nick="info-bar" glib:name="ATK_ROLE_INFO_BAR">
+        <doc xml:space="preserve">An object designed to present a message to the user within an existing
+window.</doc>
       </member>
-      <member name="level_bar" value="101" c:identifier="ATK_ROLE_LEVEL_BAR" glib:nick="level-bar" glib:name="ATK_ROLE_LEVEL_BAR">
-        <doc xml:space="preserve">A bar that serves as a level indicator to, for instance, show the strength of a password or the state of a battery.  (Since: 2.7.3)</doc>
+      <member name="level_bar" value="101" c:identifier="ATK_ROLE_LEVEL_BAR" version="2.7.3" glib:nick="level-bar" glib:name="ATK_ROLE_LEVEL_BAR">
+        <doc xml:space="preserve">A bar that serves as a level indicator to, for instance, show the strength of a
+password or the state of a battery.</doc>
       </member>
-      <member name="title_bar" value="102" c:identifier="ATK_ROLE_TITLE_BAR" glib:nick="title-bar" glib:name="ATK_ROLE_TITLE_BAR">
-        <doc xml:space="preserve">A bar that serves as the title of a window or a
-dialog. (Since: 2.12)</doc>
+      <member name="title_bar" value="102" c:identifier="ATK_ROLE_TITLE_BAR" version="2.12" glib:nick="title-bar" glib:name="ATK_ROLE_TITLE_BAR">
+        <doc xml:space="preserve">A bar that serves as the title of a window or a dialog.</doc>
       </member>
-      <member name="block_quote" value="103" c:identifier="ATK_ROLE_BLOCK_QUOTE" glib:nick="block-quote" glib:name="ATK_ROLE_BLOCK_QUOTE">
-        <doc xml:space="preserve">An object which contains a text section
-that is quoted from another source. (Since: 2.12)</doc>
+      <member name="block_quote" value="103" c:identifier="ATK_ROLE_BLOCK_QUOTE" version="2.12" glib:nick="block-quote" glib:name="ATK_ROLE_BLOCK_QUOTE">
+        <doc xml:space="preserve">An object which contains a text section that is quoted from another source.</doc>
       </member>
-      <member name="audio" value="104" c:identifier="ATK_ROLE_AUDIO" glib:nick="audio" glib:name="ATK_ROLE_AUDIO">
-        <doc xml:space="preserve">An object which represents an audio element. (Since: 2.12)</doc>
+      <member name="audio" value="104" c:identifier="ATK_ROLE_AUDIO" version="2.12" glib:nick="audio" glib:name="ATK_ROLE_AUDIO">
+        <doc xml:space="preserve">An object which represents an audio element.</doc>
       </member>
-      <member name="video" value="105" c:identifier="ATK_ROLE_VIDEO" glib:nick="video" glib:name="ATK_ROLE_VIDEO">
-        <doc xml:space="preserve">An object which represents a video element. (Since: 2.12)</doc>
+      <member name="video" value="105" c:identifier="ATK_ROLE_VIDEO" version="2.12" glib:nick="video" glib:name="ATK_ROLE_VIDEO">
+        <doc xml:space="preserve">An object which represents a video element.</doc>
       </member>
-      <member name="definition" value="106" c:identifier="ATK_ROLE_DEFINITION" glib:nick="definition" glib:name="ATK_ROLE_DEFINITION">
-        <doc xml:space="preserve">A definition of a term or concept. (Since: 2.12)</doc>
+      <member name="definition" value="106" c:identifier="ATK_ROLE_DEFINITION" version="2.12" glib:nick="definition" glib:name="ATK_ROLE_DEFINITION">
+        <doc xml:space="preserve">A definition of a term or concept.</doc>
       </member>
-      <member name="article" value="107" c:identifier="ATK_ROLE_ARTICLE" glib:nick="article" glib:name="ATK_ROLE_ARTICLE">
-        <doc xml:space="preserve">A section of a page that consists of a
-composition that forms an independent part of a document, page, or
-site. Examples: A blog entry, a news story, a forum post. (Since: 2.12)</doc>
+      <member name="article" value="107" c:identifier="ATK_ROLE_ARTICLE" version="2.12" glib:nick="article" glib:name="ATK_ROLE_ARTICLE">
+        <doc xml:space="preserve">A section of a page that consists of a composition that forms an independent
+part of a document, page, or site. Examples: A blog entry, a news story,
+a forum post.</doc>
       </member>
-      <member name="landmark" value="108" c:identifier="ATK_ROLE_LANDMARK" glib:nick="landmark" glib:name="ATK_ROLE_LANDMARK">
-        <doc xml:space="preserve">A region of a web page intended as a
-navigational landmark. This is designed to allow Assistive
-Technologies to provide quick navigation among key regions within a
-document. (Since: 2.12)</doc>
+      <member name="landmark" value="108" c:identifier="ATK_ROLE_LANDMARK" version="2.12" glib:nick="landmark" glib:name="ATK_ROLE_LANDMARK">
+        <doc xml:space="preserve">A region of a web page intended as a * navigational landmark. This is
+designed to allow Assistive Technologies to provide quick navigation
+among key regions within a * document.</doc>
       </member>
-      <member name="log" value="109" c:identifier="ATK_ROLE_LOG" glib:nick="log" glib:name="ATK_ROLE_LOG">
-        <doc xml:space="preserve">A text widget or container holding log content, such
-as chat history and error logs. In this role there is a
-relationship between the arrival of new items in the log and the
-reading order. The log contains a meaningful sequence and new
-information is added only to the end of the log, not at arbitrary
-points. (Since: 2.12)</doc>
+      <member name="log" value="109" c:identifier="ATK_ROLE_LOG" version="2.12" glib:nick="log" glib:name="ATK_ROLE_LOG">
+        <doc xml:space="preserve">A text widget or container holding log content, such as chat history
+and error logs. In this role there is a relationship between the arrival
+of new items in the log and the reading order. The log contains a
+meaningful sequence and new information is added only to the end of
+the log, not at arbitrary points.</doc>
       </member>
-      <member name="marquee" value="110" c:identifier="ATK_ROLE_MARQUEE" glib:nick="marquee" glib:name="ATK_ROLE_MARQUEE">
-        <doc xml:space="preserve">A container where non-essential information
-changes frequently. Common usages of marquee include stock tickers
-and ad banners. The primary difference between a marquee and a log
-is that logs usually have a meaningful order or sequence of
-important content changes. (Since: 2.12)</doc>
+      <member name="marquee" value="110" c:identifier="ATK_ROLE_MARQUEE" version="2.12" glib:nick="marquee" glib:name="ATK_ROLE_MARQUEE">
+        <doc xml:space="preserve">A container where non-essential information changes frequently. Common
+usages of marquee include stock tickers * and ad banners. The primary
+difference between a marquee and a log is that logs usually have a
+meaningful order or sequence of important content changes.</doc>
       </member>
-      <member name="math" value="111" c:identifier="ATK_ROLE_MATH" glib:nick="math" glib:name="ATK_ROLE_MATH">
-        <doc xml:space="preserve">A text widget or container that holds a mathematical
-expression. (Since: 2.12)</doc>
+      <member name="math" value="111" c:identifier="ATK_ROLE_MATH" version="2.12" glib:nick="math" glib:name="ATK_ROLE_MATH">
+        <doc xml:space="preserve">A text widget or container that holds a mathematical expression.</doc>
       </member>
-      <member name="rating" value="112" c:identifier="ATK_ROLE_RATING" glib:nick="rating" glib:name="ATK_ROLE_RATING">
-        <doc xml:space="preserve">A widget whose purpose is to display a rating,
-such as the number of stars associated with a song in a media
-player. Objects of this role should also implement
-AtkValue. (Since: 2.12)</doc>
+      <member name="rating" value="112" c:identifier="ATK_ROLE_RATING" version="2.12" glib:nick="rating" glib:name="ATK_ROLE_RATING">
+        <doc xml:space="preserve">A widget whose purpose is to display a rating, such as the number of
+stars associated with a song in a media player. Objects of this role should
+also implement AtkValue.</doc>
       </member>
-      <member name="timer" value="113" c:identifier="ATK_ROLE_TIMER" glib:nick="timer" glib:name="ATK_ROLE_TIMER">
-        <doc xml:space="preserve">An object containing a numerical counter which
-indicates an amount of elapsed time from a start point, or the time
-remaining until an end point. (Since: 2.12)</doc>
+      <member name="timer" value="113" c:identifier="ATK_ROLE_TIMER" version="2.12" glib:nick="timer" glib:name="ATK_ROLE_TIMER">
+        <doc xml:space="preserve">An object containing a numerical counter which indicates an amount of
+elapsed time from a start point, or the time remaining until an end point.</doc>
       </member>
-      <member name="description_list" value="114" c:identifier="ATK_ROLE_DESCRIPTION_LIST" glib:nick="description-list" glib:name="ATK_ROLE_DESCRIPTION_LIST">
-        <doc xml:space="preserve">An object that represents a list of
-term-value groups. A term-value group represents a individual
-description and consist of one or more names
+      <member name="description_list" value="114" c:identifier="ATK_ROLE_DESCRIPTION_LIST" version="2.12" glib:nick="description-list" glib:name="ATK_ROLE_DESCRIPTION_LIST">
+        <doc xml:space="preserve">An object that represents a list of term-value groups. A term-value group
+represents an individual description and consist of one or more names
 (ATK_ROLE_DESCRIPTION_TERM) followed by one or more values
 (ATK_ROLE_DESCRIPTION_VALUE). For each list, there should not be
-more than one group with the same term name. (Since: 2.12)</doc>
+more than one group with the same term name.</doc>
       </member>
-      <member name="description_term" value="115" c:identifier="ATK_ROLE_DESCRIPTION_TERM" glib:nick="description-term" glib:name="ATK_ROLE_DESCRIPTION_TERM">
-        <doc xml:space="preserve">An object that represents a term or phrase
-with a corresponding definition. (Since: 2.12)</doc>
+      <member name="description_term" value="115" c:identifier="ATK_ROLE_DESCRIPTION_TERM" version="2.12" glib:nick="description-term" glib:name="ATK_ROLE_DESCRIPTION_TERM">
+        <doc xml:space="preserve">An object that represents a term or phrase with a corresponding definition.</doc>
       </member>
-      <member name="description_value" value="116" c:identifier="ATK_ROLE_DESCRIPTION_VALUE" glib:nick="description-value" glib:name="ATK_ROLE_DESCRIPTION_VALUE">
-        <doc xml:space="preserve">An object that represents the
-description, definition or value of a term. (Since: 2.12)</doc>
+      <member name="description_value" value="116" c:identifier="ATK_ROLE_DESCRIPTION_VALUE" version="2.12" glib:nick="description-value" glib:name="ATK_ROLE_DESCRIPTION_VALUE">
+        <doc xml:space="preserve">An object that represents the description, definition or value of a term.</doc>
       </member>
-      <member name="static" value="117" c:identifier="ATK_ROLE_STATIC" glib:nick="static" glib:name="ATK_ROLE_STATIC">
-        <doc xml:space="preserve">A generic non-container object whose purpose is to display a
-brief amount of information to the user and whose role is known by the
+      <member name="static" value="117" c:identifier="ATK_ROLE_STATIC" version="2.16" glib:nick="static" glib:name="ATK_ROLE_STATIC">
+        <doc xml:space="preserve">A generic non-container object whose purpose is to display a brief
+amount of information to the user and whose role is known by the
 implementor but lacks semantic value for the user. Examples in which
 %ATK_ROLE_STATIC is appropriate include the message displayed in a message box
 and an image used as an alternative means to display text. %ATK_ROLE_STATIC
@@ -7964,60 +7989,53 @@ displayed information through the accessible name of the object. If doing so see
 inappropriate, it may indicate that a different role should be used. For
 labels which describe another widget, see %ATK_ROLE_LABEL. For text views, see
 %ATK_ROLE_TEXT. For generic containers, see %ATK_ROLE_PANEL. For objects whose
-role is not known by the implementor, see %ATK_ROLE_UNKNOWN. (Since: 2.16)</doc>
+role is not known by the implementor, see %ATK_ROLE_UNKNOWN.</doc>
       </member>
-      <member name="math_fraction" value="118" c:identifier="ATK_ROLE_MATH_FRACTION" glib:nick="math-fraction" glib:name="ATK_ROLE_MATH_FRACTION">
-        <doc xml:space="preserve">An object that represents a mathematical fraction.
-(Since: 2.16)</doc>
+      <member name="math_fraction" value="118" c:identifier="ATK_ROLE_MATH_FRACTION" version="2.16" glib:nick="math-fraction" glib:name="ATK_ROLE_MATH_FRACTION">
+        <doc xml:space="preserve">An object that represents a mathematical fraction.</doc>
       </member>
-      <member name="math_root" value="119" c:identifier="ATK_ROLE_MATH_ROOT" glib:nick="math-root" glib:name="ATK_ROLE_MATH_ROOT">
-        <doc xml:space="preserve">An object that represents a mathematical expression
-displayed with a radical. (Since: 2.16)</doc>
+      <member name="math_root" value="119" c:identifier="ATK_ROLE_MATH_ROOT" version="2.16" glib:nick="math-root" glib:name="ATK_ROLE_MATH_ROOT">
+        <doc xml:space="preserve">An object that represents a mathematical expression displayed with a
+radical.</doc>
       </member>
-      <member name="subscript" value="120" c:identifier="ATK_ROLE_SUBSCRIPT" glib:nick="subscript" glib:name="ATK_ROLE_SUBSCRIPT">
-        <doc xml:space="preserve">An object that contains text that is displayed as a
-subscript. (Since: 2.16)</doc>
+      <member name="subscript" value="120" c:identifier="ATK_ROLE_SUBSCRIPT" version="2.16" glib:nick="subscript" glib:name="ATK_ROLE_SUBSCRIPT">
+        <doc xml:space="preserve">An object that contains text that is displayed as a subscript.</doc>
       </member>
-      <member name="superscript" value="121" c:identifier="ATK_ROLE_SUPERSCRIPT" glib:nick="superscript" glib:name="ATK_ROLE_SUPERSCRIPT">
-        <doc xml:space="preserve">An object that contains text that is displayed as a
-superscript. (Since: 2.16)</doc>
+      <member name="superscript" value="121" c:identifier="ATK_ROLE_SUPERSCRIPT" version="2.16" glib:nick="superscript" glib:name="ATK_ROLE_SUPERSCRIPT">
+        <doc xml:space="preserve">An object that contains text that is displayed as a superscript.</doc>
       </member>
-      <member name="footnote" value="122" c:identifier="ATK_ROLE_FOOTNOTE" glib:nick="footnote" glib:name="ATK_ROLE_FOOTNOTE">
-        <doc xml:space="preserve">An object that contains the text of a footnote. (Since: 2.26)</doc>
+      <member name="footnote" value="122" c:identifier="ATK_ROLE_FOOTNOTE" version="2.26" glib:nick="footnote" glib:name="ATK_ROLE_FOOTNOTE">
+        <doc xml:space="preserve">An object that contains the text of a footnote.</doc>
       </member>
-      <member name="content_deletion" value="123" c:identifier="ATK_ROLE_CONTENT_DELETION" glib:nick="content-deletion" glib:name="ATK_ROLE_CONTENT_DELETION">
-        <doc xml:space="preserve">Content previously deleted or proposed to be
-deleted, e.g. in revision history or a content view providing suggestions
-from reviewers. (Since: 2.34)</doc>
+      <member name="content_deletion" value="123" c:identifier="ATK_ROLE_CONTENT_DELETION" version="2.34" glib:nick="content-deletion" glib:name="ATK_ROLE_CONTENT_DELETION">
+        <doc xml:space="preserve">Content previously deleted or proposed to be deleted, e.g. in revision
+history or a content view providing suggestions from reviewers.</doc>
       </member>
-      <member name="content_insertion" value="124" c:identifier="ATK_ROLE_CONTENT_INSERTION" glib:nick="content-insertion" glib:name="ATK_ROLE_CONTENT_INSERTION">
-        <doc xml:space="preserve">Content previously inserted or proposed to be
-inserted, e.g. in revision history or a content view providing suggestions
-from reviewers. (Since: 2.34)</doc>
+      <member name="content_insertion" value="124" c:identifier="ATK_ROLE_CONTENT_INSERTION" version="2.34" glib:nick="content-insertion" glib:name="ATK_ROLE_CONTENT_INSERTION">
+        <doc xml:space="preserve">Content previously inserted or proposed to be inserted, e.g. in revision
+history or a content view providing suggestions from reviewers.</doc>
       </member>
-      <member name="mark" value="125" c:identifier="ATK_ROLE_MARK" glib:nick="mark" glib:name="ATK_ROLE_MARK">
-        <doc xml:space="preserve">A run of content that is marked or highlighted, such as for
-reference purposes, or to call it out as having a special purpose. If the
-marked content has an associated section in the document elaborating on the
+      <member name="mark" value="125" c:identifier="ATK_ROLE_MARK" version="2.36" glib:nick="mark" glib:name="ATK_ROLE_MARK">
+        <doc xml:space="preserve">A run of content that is marked or highlighted, such as for reference
+ purposes, or to call it out as having a special purpose. If the marked
+content has an associated section in the document elaborating on the
 reason for the mark, then %ATK_RELATION_DETAILS should be used on the mark
 to point to that associated section. In addition, the reciprocal relation
 %ATK_RELATION_DETAILS_FOR should be used on the associated content section
-to point back to the mark. (Since: 2.36)</doc>
+to point back to the mark.</doc>
       </member>
-      <member name="suggestion" value="126" c:identifier="ATK_ROLE_SUGGESTION" glib:nick="suggestion" glib:name="ATK_ROLE_SUGGESTION">
-        <doc xml:space="preserve">A container for content that is called out as a proposed
-change from the current version of the document, such as by a reviewer of the
+      <member name="suggestion" value="126" c:identifier="ATK_ROLE_SUGGESTION" version="2.36" glib:nick="suggestion" glib:name="ATK_ROLE_SUGGESTION">
+        <doc xml:space="preserve">A container for content that is called out as a proposed change from
+the current version of the document, such as by a reviewer of the
 content. This role should include either %ATK_ROLE_CONTENT_DELETION and/or
 %ATK_ROLE_CONTENT_INSERTION children, in any order, to indicate what the
-actual change is. (Since: 2.36)</doc>
+actual change is.</doc>
       </member>
-      <member name="push_button_menu" value="127" c:identifier="ATK_ROLE_PUSH_BUTTON_MENU" glib:nick="push-button-menu" glib:name="ATK_ROLE_PUSH_BUTTON_MENU">
-        <doc xml:space="preserve">A specialized push button to open a menu.
-(Since: 2.46)</doc>
+      <member name="push_button_menu" value="127" c:identifier="ATK_ROLE_PUSH_BUTTON_MENU" version="2.46" glib:nick="push-button-menu" glib:name="ATK_ROLE_PUSH_BUTTON_MENU">
+        <doc xml:space="preserve">A specialized push button to open a menu.</doc>
       </member>
-      <member name="switch" value="128" c:identifier="ATK_ROLE_SWITCH" glib:nick="switch" glib:name="ATK_ROLE_SWITCH">
-        <doc xml:space="preserve">A switch that can be toggled on/off.
-(Since: 2.56)</doc>
+      <member name="switch" value="128" c:identifier="ATK_ROLE_SWITCH" version="2.56" glib:nick="switch" glib:name="ATK_ROLE_SWITCH">
+        <doc xml:space="preserve">A switch that can be toggled on/off.</doc>
       </member>
       <member name="last_defined" value="129" c:identifier="ATK_ROLE_LAST_DEFINED" glib:nick="last-defined" glib:name="ATK_ROLE_LAST_DEFINED">
         <doc xml:space="preserve">not a valid role, used for finding end of the enumeration</doc>
@@ -9093,12 +9111,12 @@ neither checked nor unchecked.</doc>
         <doc xml:space="preserve">Indicates that the object has encountered an error condition due to failure of input validation. For instance, a form control may acquire this state in response to invalid or malformed user input.</doc>
       </member>
       <member name="supports_autocompletion" value="34" c:identifier="ATK_STATE_SUPPORTS_AUTOCOMPLETION" glib:nick="supports-autocompletion" glib:name="ATK_STATE_SUPPORTS_AUTOCOMPLETION">
-        <doc xml:space="preserve">Indicates that the object in question implements some form of &#xA8;typeahead&#xA8; or
+        <doc xml:space="preserve">Indicates that the object in question implements some form of ¨typeahead¨ or
 pre-selection behavior whereby entering the first character of one or more sub-elements
 causes those elements to scroll into view or become selected.  Subsequent character input
 may narrow the selection further as long as one or more sub-elements match the string.
 This state is normally only useful and encountered on objects that implement Selection.
-In some cases the typeahead behavior may result in full or partial &#xA8;completion&#xA8; of
+In some cases the typeahead behavior may result in full or partial ¨completion¨ of
 the data in the input field, in which case these input events may trigger text-changed
 events from the AtkText interface.  This state supplants @ATK_ROLE_AUTOCOMPLETE.</doc>
       </member>
@@ -9118,33 +9136,31 @@ static; this state is advisory.</doc>
       <member name="visited" value="38" c:identifier="ATK_STATE_VISITED" glib:nick="visited" glib:name="ATK_STATE_VISITED">
         <doc xml:space="preserve">Indicates that the object (typically a hyperlink) has already been 'activated', and/or its backing data has already been downloaded, rendered, or otherwise "visited".</doc>
       </member>
-      <member name="checkable" value="39" c:identifier="ATK_STATE_CHECKABLE" glib:nick="checkable" glib:name="ATK_STATE_CHECKABLE">
-        <doc xml:space="preserve">Indicates this object has the potential to be
- checked, such as a checkbox or toggle-able table cell. @Since:
- ATK-2.12</doc>
+      <member name="checkable" value="39" c:identifier="ATK_STATE_CHECKABLE" version="2.12" glib:nick="checkable" glib:name="ATK_STATE_CHECKABLE">
+        <doc xml:space="preserve">Indicates this object has the potential to be  checked, such as a checkbox
+or toggle-able table cell.</doc>
       </member>
-      <member name="has_popup" value="40" c:identifier="ATK_STATE_HAS_POPUP" glib:nick="has-popup" glib:name="ATK_STATE_HAS_POPUP">
-        <doc xml:space="preserve">Indicates that the object has a popup context
-menu or sub-level menu which may or may not be showing. This means
-that activation renders conditional content.  Note that ordinary
-tooltips are not considered popups in this context. @Since: ATK-2.12</doc>
+      <member name="has_popup" value="40" c:identifier="ATK_STATE_HAS_POPUP" version="2.12" glib:nick="has-popup" glib:name="ATK_STATE_HAS_POPUP">
+        <doc xml:space="preserve">Indicates that the object has a popup context menu or sub-level menu which
+may or may not be showing. This means that activation renders conditional
+content.  Note that ordinary tooltips are not considered popups in this
+context.</doc>
       </member>
-      <member name="has_tooltip" value="41" c:identifier="ATK_STATE_HAS_TOOLTIP" glib:nick="has-tooltip" glib:name="ATK_STATE_HAS_TOOLTIP">
-        <doc xml:space="preserve">Indicates this object has a tooltip. @Since: ATK-2.16</doc>
+      <member name="has_tooltip" value="41" c:identifier="ATK_STATE_HAS_TOOLTIP" version="2.16" glib:nick="has-tooltip" glib:name="ATK_STATE_HAS_TOOLTIP">
+        <doc xml:space="preserve">Indicates this object has a tooltip.</doc>
       </member>
-      <member name="read_only" value="42" c:identifier="ATK_STATE_READ_ONLY" glib:nick="read-only" glib:name="ATK_STATE_READ_ONLY">
-        <doc xml:space="preserve">Indicates that a widget which is ENABLED and SENSITIVE
-has a value which can be read, but not modified, by the user. Note that this
-state should only be applied to widget types whose value is normally directly
-user modifiable, such as check boxes, radio buttons, spin buttons, text input
-fields, and combo boxes, as a means to convey that the expected interaction
-with that widget is not possible. When the expected interaction with a
-widget does not include modification by the user, as is the case with
-labels and containers, ATK_STATE_READ_ONLY should not be applied. See also
-ATK_STATE_EDITABLE. @Since: ATK-2-16</doc>
+      <member name="read_only" value="42" c:identifier="ATK_STATE_READ_ONLY" version="2.16" glib:nick="read-only" glib:name="ATK_STATE_READ_ONLY">
+        <doc xml:space="preserve">Indicates that a widget which is ENABLED and SENSITIVE has a value which
+can be read, but not modified, by the user. Note that this state should only
+be applied to widget types whose value is normally directly user modifiable,
+such as check boxes, radio buttons, spin buttons, text input fields, and
+combo boxes, as a means to convey that the expected interaction with that
+widget is not possible. When the expected interaction with a widget does not
+include modification by the user, as is the case with labels and containers,
+ATK_STATE_READ_ONLY should not be applied. See also ATK_STATE_EDITABLE.</doc>
       </member>
-      <member name="collapsed" value="43" c:identifier="ATK_STATE_COLLAPSED" glib:nick="collapsed" glib:name="ATK_STATE_COLLAPSED">
-        <doc xml:space="preserve">Indicates this object is collapsed. @Since: ATK-2.38</doc>
+      <member name="collapsed" value="43" c:identifier="ATK_STATE_COLLAPSED" version="2.38" glib:nick="collapsed" glib:name="ATK_STATE_COLLAPSED">
+        <doc xml:space="preserve">Indicates this object is collapsed.</doc>
       </member>
       <member name="last_defined" value="44" c:identifier="ATK_STATE_LAST_DEFINED" glib:nick="last-defined" glib:name="ATK_STATE_LAST_DEFINED">
         <doc xml:space="preserve">Not a valid state, used for finding end of enumeration</doc>
@@ -9858,7 +9874,7 @@ or zero if value does not implement this interface.</doc>
       </virtual-method>
       <virtual-method name="get_summary" invoker="get_summary">
         <doc xml:space="preserve">Gets the summary description of the table.</doc>
-        <return-value transfer-ownership="full">
+        <return-value transfer-ownership="none">
           <doc xml:space="preserve">a AtkObject* representing a summary description
 of the table, or zero if value does not implement this interface.</doc>
           <type name="Object" c:type="AtkObject*"/>
@@ -10459,7 +10475,7 @@ or zero if value does not implement this interface.</doc>
       </method>
       <method name="get_summary" c:identifier="atk_table_get_summary">
         <doc xml:space="preserve">Gets the summary description of the table.</doc>
-        <return-value transfer-ownership="full">
+        <return-value transfer-ownership="none">
           <doc xml:space="preserve">a AtkObject* representing a summary description
 of the table, or zero if value does not implement this interface.</doc>
           <type name="Object" c:type="AtkObject*"/>
@@ -10924,7 +10940,7 @@ or 0 if the cell does not implement this method.</doc>
       </virtual-method>
       <virtual-method name="get_table" invoker="get_table" version="2.12">
         <doc xml:space="preserve">Returns a reference to the accessible of the containing table.</doc>
-        <return-value transfer-ownership="full">
+        <return-value transfer-ownership="none">
           <doc xml:space="preserve">the atk object for the containing table.</doc>
           <type name="Object" c:type="AtkObject*"/>
         </return-value>
@@ -11051,7 +11067,7 @@ or 0 if the cell does not implement this method.</doc>
       </method>
       <method name="get_table" c:identifier="atk_table_cell_get_table" version="2.12">
         <doc xml:space="preserve">Returns a reference to the accessible of the containing table.</doc>
-        <return-value transfer-ownership="full">
+        <return-value transfer-ownership="none">
           <doc xml:space="preserve">the atk object for the containing table.</doc>
           <type name="Object" c:type="AtkObject*"/>
         </return-value>
@@ -11200,7 +11216,7 @@ representing the row header cells.</doc>
         <doc xml:space="preserve">virtual function that returns a reference to the
   accessible of the containing table</doc>
         <callback name="get_table">
-          <return-value transfer-ownership="full">
+          <return-value transfer-ownership="none">
             <doc xml:space="preserve">the atk object for the containing table.</doc>
             <type name="Object" c:type="AtkObject*"/>
           </return-value>
@@ -11473,7 +11489,7 @@ interface.</doc>
       </field>
       <field name="get_summary">
         <callback name="get_summary">
-          <return-value transfer-ownership="full">
+          <return-value transfer-ownership="none">
             <doc xml:space="preserve">a AtkObject* representing a summary description
 of the table, or zero if value does not implement this interface.</doc>
             <type name="Object" c:type="AtkObject*"/>
@@ -13393,10 +13409,10 @@ selected text of an object which implements AtkText changes.</doc>
         <doc xml:space="preserve">The number of pixels that the text is indented</doc>
       </member>
       <member name="invisible" value="4" c:identifier="ATK_TEXT_ATTR_INVISIBLE" glib:nick="invisible" glib:name="ATK_TEXT_ATTR_INVISIBLE">
-        <doc xml:space="preserve">Either "true" or "false" indicating whether text is visible or not</doc>
+        <doc xml:space="preserve">Either "true" or "false" indicating whether text is visible or not.</doc>
       </member>
       <member name="editable" value="5" c:identifier="ATK_TEXT_ATTR_EDITABLE" glib:nick="editable" glib:name="ATK_TEXT_ATTR_EDITABLE">
-        <doc xml:space="preserve">Either "true" or "false" indicating whether text is editable or not</doc>
+        <doc xml:space="preserve">Either "true" or "false" indicating whether text is editable or not.</doc>
       </member>
       <member name="pixels_above_lines" value="6" c:identifier="ATK_TEXT_ATTR_PIXELS_ABOVE_LINES" glib:nick="pixels-above-lines" glib:name="ATK_TEXT_ATTR_PIXELS_ABOVE_LINES">
         <doc xml:space="preserve">Pixels of blank space to leave above each newline-terminated line.</doc>
@@ -13467,7 +13483,14 @@ selected text of an object which implements AtkText changes.</doc>
       <member name="text_position" value="28" c:identifier="ATK_TEXT_ATTR_TEXT_POSITION" glib:nick="text-position" glib:name="ATK_TEXT_ATTR_TEXT_POSITION">
         <doc xml:space="preserve">The vertical position with respect to the baseline. Values are "baseline", "super", or "sub". Note that a super or sub text attribute refers to position with respect to the baseline of the prior character.</doc>
       </member>
-      <member name="last_defined" value="29" c:identifier="ATK_TEXT_ATTR_LAST_DEFINED" glib:nick="last-defined" glib:name="ATK_TEXT_ATTR_LAST_DEFINED">
+      <member name="mark" value="29" c:identifier="ATK_TEXT_ATTR_MARK" version="2.60" glib:nick="mark" glib:name="ATK_TEXT_ATTR_MARK">
+        <doc xml:space="preserve">A run of content that is marked or highlighted, such as for reference
+purposes, or to call it out as having a special purpose that is clear from
+context. This is similar to ATK_ROLE_MARK, but this is used where it may
+apply to a partial span of text in an object, rather than to an entire
+object. Values are "true" or "false".</doc>
+      </member>
+      <member name="last_defined" value="30" c:identifier="ATK_TEXT_ATTR_LAST_DEFINED" glib:nick="last-defined" glib:name="ATK_TEXT_ATTR_LAST_DEFINED">
         <doc xml:space="preserve">not a valid text attribute, used for finding end of enumeration</doc>
       </member>
       <function name="for_name" c:identifier="atk_text_attribute_for_name">
