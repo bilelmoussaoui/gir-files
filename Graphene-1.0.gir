@@ -1,11 +1,12 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <include name="GObject" version="2.0"/>
   <package name="graphene-gobject-1.0"/>
   <c:include name="graphene-gobject.h"/>
+  <doc:format name="unknown"/>
   <namespace name="Graphene" version="1.0" shared-library="libgraphene-1.0.so.0" c:identifier-prefixes="Graphene" c:symbol-prefixes="graphene">
     <function-macro name="ALIGNED_DECL" c:identifier="GRAPHENE_ALIGNED_DECL" introspectable="0">
       <parameters>
@@ -39,7 +40,7 @@ The contents of the returned structure are undefined.</doc>
 #graphene_box_t @b.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the box is contained in the given box</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -56,7 +57,7 @@ The contents of the returned structure are undefined.</doc>
         <doc xml:space="preserve">Checks whether @box contains the given @point.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the point is contained in the given box</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="box" transfer-ownership="none">
@@ -73,7 +74,7 @@ The contents of the returned structure are undefined.</doc>
         <doc xml:space="preserve">Checks whether the two given boxes are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the boxes are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -427,7 +428,7 @@ If the two boxes do not intersect, @res will contain a degenerate box
 initialized with graphene_box_empty().</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">true if the two boxes intersect</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -613,7 +614,7 @@ The contents of the returned structure are undefined.</doc>
         <doc xml:space="preserve">Checks if two #graphene_euler_t are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the two #graphene_euler_t are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -959,11 +960,11 @@ associated with the #graphene_euler_t; for instance, if the order
 used to initialize @e is %GRAPHENE_EULER_ORDER_XYZ:
 
  * the first rotation moves the body around the X axis with
-   an angle &#x3C6;
+   an angle φ
  * the second rotation moves the body around the Y axis with
-   an angle of &#x3D1;
+   an angle of ϑ
  * the third rotation moves the body around the Z axis with
-   an angle of &#x3C8;
+   an angle of ψ
 
 The rotation sign convention is right-handed, to preserve compatibility
 between Euler-based, quaternion-based, and angle-axis-based rotations.</doc>
@@ -1147,7 +1148,7 @@ The contents of the returned structure are undefined.</doc>
 #graphene_frustum_t.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the point is inside the frustum</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="f" transfer-ownership="none">
@@ -1164,7 +1165,7 @@ The contents of the returned structure are undefined.</doc>
         <doc xml:space="preserve">Checks whether the two given #graphene_frustum_t are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the given frustums are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -1286,7 +1287,7 @@ planes of another #graphene_frustum_t.</doc>
 a #graphene_frustum_t.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the box intersects the frustum</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="f" transfer-ownership="none">
@@ -1304,7 +1305,7 @@ a #graphene_frustum_t.</doc>
 a #graphene_frustum_t.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the sphere intersects the frustum</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="f" transfer-ownership="none">
@@ -1343,7 +1344,7 @@ published in "Graphics Gems II", edited by Jim Arvo, and
 [available online](http://web.archive.org/web/20150512160205/http://tog.acm.org/resources/GraphicsGems/gemsii/unmatrix.c).</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the matrix could be decomposed</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="m" transfer-ownership="none">
@@ -1389,7 +1390,7 @@ published in "Graphics Gems II", edited by Jim Arvo, and
         <doc xml:space="preserve">Checks whether the two given #graphene_matrix_t matrices are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the two matrices are equal, and `false` otherwise</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -1428,7 +1429,7 @@ graphene_matrix_near(). For instance:
 ]|</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the matrices are equal. and `false` otherwise</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -1580,9 +1581,9 @@ transformation matrix.
 The arguments map to the following matrix layout:
 
 |[&lt;!-- language="plain" --&gt;
-  &#x239B; xx  yx &#x239E;   &#x239B;  a   b  0 &#x239E;
-  &#x239C; xy  yy &#x239F; = &#x239C;  c   d  0 &#x239F;
-  &#x239D; x0  y0 &#x23A0;   &#x239D; tx  ty  1 &#x23A0;
+  ⎛ xx  yx ⎞   ⎛  a   b  0 ⎞
+  ⎜ xy  yy ⎟ = ⎜  c   d  0 ⎟
+  ⎝ x0  y0 ⎠   ⎝ tx  ty  1 ⎠
 ]|
 
 This function can be used to convert between an affine matrix type
@@ -1971,7 +1972,7 @@ will return an identity matrix.</doc>
         <doc xml:space="preserve">Inverts the given matrix.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the matrix is invertible</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="m" transfer-ownership="none">
@@ -1991,7 +1992,7 @@ a 2D affine transformation matrix.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the matrix is compatible with an affine
   transformation matrix</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="m" transfer-ownership="none">
@@ -2004,7 +2005,7 @@ a 2D affine transformation matrix.</doc>
         <doc xml:space="preserve">Checks whether a #graphene_matrix_t has a visible back face.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the back face of the matrix is visible</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="m" transfer-ownership="none">
@@ -2017,7 +2018,7 @@ a 2D affine transformation matrix.</doc>
         <doc xml:space="preserve">Checks whether the given #graphene_matrix_t is the identity matrix.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the matrix is the identity matrix</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="m" transfer-ownership="none">
@@ -2030,7 +2031,7 @@ a 2D affine transformation matrix.</doc>
         <doc xml:space="preserve">Checks whether a matrix is singular.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the matrix is singular</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="m" transfer-ownership="none">
@@ -2043,7 +2044,7 @@ a 2D affine transformation matrix.</doc>
         <doc xml:space="preserve">Multiplies two #graphene_matrix_t.
 
 Matrix multiplication is not commutative in general; the order of the factors matters.
-The product of this multiplication is (@a &#xD7; @b)</doc>
+The product of this multiplication is (@a × @b)</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
         </return-value>
@@ -2070,7 +2071,7 @@ other.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the two matrices are near each other, and
   `false` otherwise</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -2408,9 +2409,9 @@ matrix, if the given matrix is compatible.
 The returned values have the following layout:
 
 |[&lt;!-- language="plain" --&gt;
-  &#x239B; xx  yx &#x239E;   &#x239B;  a   b  0 &#x239E;
-  &#x239C; xy  yy &#x239F; = &#x239C;  c   d  0 &#x239F;
-  &#x239D; x0  y0 &#x23A0;   &#x239D; tx  ty  1 &#x23A0;
+  ⎛ xx  yx ⎞   ⎛  a   b  0 ⎞
+  ⎜ xy  yy ⎟ = ⎜  c   d  0 ⎟
+  ⎝ x0  y0 ⎠   ⎝ tx  ty  1 ⎠
 ]|
 
 This function can be used to convert between a #graphene_matrix_t
@@ -2418,7 +2419,7 @@ and an affine matrix type from other libraries.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the matrix is compatible with an affine
   transformation matrix</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="m" transfer-ownership="none">
@@ -2786,7 +2787,7 @@ given matrix, within the given axis aligned rectangular @bounds.</doc>
 given matrix, within the given axis aligned rectangular @bounds.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the point was successfully untransformed</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="m" transfer-ownership="none">
@@ -2896,7 +2897,7 @@ The contents of the returned structure are undefined.</doc>
         <doc xml:space="preserve">Checks whether the two given #graphene_plane_t are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the given planes are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -3203,7 +3204,7 @@ you want to control the fuzziness of the match, you can use
 graphene_point_near() instead.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the points have the same coordinates</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -3316,7 +3317,7 @@ given @factor.</doc>
 the threshold of @epsilon.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the distance is within @epsilon</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -3445,7 +3446,7 @@ the threshold of @epsilon.</doc>
         <doc xml:space="preserve">Checks whether two given points are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the points are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -3576,7 +3577,7 @@ coordinates of the given #graphene_point3d_t.</doc>
 an @epsilon factor.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the points are near each other</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -3731,7 +3732,7 @@ The contents of the returned instance are undefined.</doc>
         <doc xml:space="preserve">Checks if the given #graphene_quad_t contains the given #graphene_point_t.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the point is inside the #graphene_quad_t</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="q" transfer-ownership="none">
@@ -3907,7 +3908,7 @@ The contents of the returned value are undefined.</doc>
         <doc xml:space="preserve">Checks whether the given quaternions are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the quaternions are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -4384,7 +4385,7 @@ The contents of the returned structure are undefined.</doc>
         <doc xml:space="preserve">Checks whether the two given #graphene_ray_t are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the given rays are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -4659,7 +4660,7 @@ given #graphene_box_t @b.
 See also: graphene_ray_intersect_box()</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the ray intersects the box</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="r" transfer-ownership="none">
@@ -4679,7 +4680,7 @@ given #graphene_sphere_t @s.
 See also: graphene_ray_intersect_sphere()</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the ray intersects the sphere</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="r" transfer-ownership="none">
@@ -4699,7 +4700,7 @@ given #graphene_triangle_t @b.
 See also: graphene_ray_intersect_triangle()</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the ray intersects the triangle</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="r" transfer-ownership="none">
@@ -4752,7 +4753,7 @@ will internally operate on a normalized copy; all functions returning a
         <doc xml:space="preserve">Checks whether a #graphene_rect_t contains the given coordinates.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the rectangle contains the point</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="r" transfer-ownership="none">
@@ -4770,7 +4771,7 @@ will internally operate on a normalized copy; all functions returning a
 rectangle.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the rectangle @a fully contains @b</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -4787,7 +4788,7 @@ rectangle.</doc>
         <doc xml:space="preserve">Checks whether the two given rectangle are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the rectangles are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -5158,7 +5159,7 @@ If the two rectangles do not intersect, @res will contain
 a degenerate rectangle with origin in (0, 0) and a size of 0.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the two rectangles intersect</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -5302,8 +5303,8 @@ calling `ceil` on the bottom-right coordinates.
 
 If you want to be sure that the rounded rectangle
 completely covers the area that was covered by the
-original rectangle &#x2014; i.e. you want to cover the area
-including all its corners &#x2014; this function will make sure
+original rectangle — i.e. you want to cover the area
+including all its corners — this function will make sure
 that the size is recomputed taking into account the ceiling
 of the coordinates of the bottom-right corner.
 If the difference between the original coordinates and the
@@ -5478,7 +5479,7 @@ The contents of the returned value are undefined.</doc>
         <doc xml:space="preserve">Checks whether the two give #graphene_size_t are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the sizes are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -5619,7 +5620,7 @@ The contents of the newly allocated structure are undefined.</doc>
 of a #graphene_sphere_t.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the sphere contains the point</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="s" transfer-ownership="none">
@@ -5654,7 +5655,7 @@ a #graphene_sphere_t.</doc>
         <doc xml:space="preserve">Checks whether two #graphene_sphere_t are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the spheres are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -5813,7 +5814,7 @@ of the 3D volume that encompasses all @vectors.</doc>
         <doc xml:space="preserve">Checks whether the sphere has a zero radius.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the sphere is empty</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="s" transfer-ownership="none">
@@ -5870,7 +5871,7 @@ The contents of the returned structure are undefined.</doc>
         <doc xml:space="preserve">Checks whether the given triangle @t contains the point @p.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the point is inside the triangle</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="t" transfer-ownership="none">
@@ -5887,7 +5888,7 @@ The contents of the returned structure are undefined.</doc>
         <doc xml:space="preserve">Checks whether the two given #graphene_triangle_t are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the triangles are equal</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="a" transfer-ownership="none">
@@ -5944,7 +5945,7 @@ The returned #graphene_vec2_t contains the following values, in order:
  - `res.y = v`</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the barycentric coordinates are valid</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="t" transfer-ownership="none">
@@ -6073,7 +6074,7 @@ The UV coordinates will be placed in the @res vector:
 See also: graphene_triangle_get_barycoords()</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the coordinates are valid</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="t" transfer-ownership="none">
@@ -6358,7 +6359,7 @@ vector @res.</doc>
         <doc xml:space="preserve">Checks whether the two given #graphene_vec2_t are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the two vectors are equal, and false otherwise</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="v1" transfer-ownership="none">
@@ -6574,7 +6575,7 @@ each result into the components of @res.</doc>
 whether their values are within the given @epsilon.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the two vectors are near each other</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="v1" transfer-ownership="none">
@@ -6818,7 +6819,7 @@ vector @res.</doc>
         <doc xml:space="preserve">Checks whether the two given #graphene_vec3_t are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the two vectors are equal, and false otherwise</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="v1" transfer-ownership="none">
@@ -7140,7 +7141,7 @@ vector that contains the minimum values.</doc>
 whether their values are within the given @epsilon.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the two vectors are near each other</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="v1" transfer-ownership="none">
@@ -7375,7 +7376,7 @@ vector @res.</doc>
         <doc xml:space="preserve">Checks whether the two given #graphene_vec4_t are equal.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the two vectors are equal, and false otherwise</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="v1" transfer-ownership="none">
@@ -7707,7 +7708,7 @@ vector that contains the minimum values.</doc>
 whether their values are within the given @epsilon.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">`true` if the two vectors are near each other</doc>
-          <type name="gboolean" c:type="_Bool"/>
+          <type name="gboolean" c:type="bool"/>
         </return-value>
         <parameters>
           <instance-parameter name="v1" transfer-ownership="none">
@@ -7937,25 +7938,25 @@ three angles. It also optionally can describe the order of the rotations.
 states that, in three-dimensional space, any displacement of a rigid body
 such that a point on the rigid body remains fixed, is equivalent to a single
 rotation about some axis that runs through the fixed point. The angles on
-each axis can be placed in a vector of three components&#x2014;&#x3B1;, &#x3B2;, and &#x3B3;&#x2014;called
+each axis can be placed in a vector of three components—α, β, and γ—called
 the *Euler angle vector*. Each rotation described by these components results
 in a rotation matrix:
 
 |[
-  rot(&#x3B1;) = A
-  rot(&#x3B2;) = B
-  rot(&#x3B3;) = G
+  rot(α) = A
+  rot(β) = B
+  rot(γ) = G
 ]|
 
 The resulting rotation matrix expressed by the Euler angle vector is
 given by the product of each rotation matrix:
 
 |[
-  G &#xD7; B &#xD7; A = R
+  G × B × A = R
 ]|
 
 In order to specify the meaning of an Euler angle vector, we need to
-assign each axis of rotation to the corresponding &#x3B1;, &#x3B2;, and &#x3B3; components,
+assign each axis of rotation to the corresponding α, β, and γ components,
 for instance X, Y, and Z.
 
 Additionally, we need to specify whether the rotations move the axes
@@ -7975,7 +7976,7 @@ by the right-hand rule, which means all rotations are counterclockwise.
 
 Rotations described Euler angles are typically immediately understandable,
 compared to rotations expressed using quaternions, but they are susceptible
-of ["Gimbal lock"](http://en.wikipedia.org/wiki/Gimbal_lock) &#x2014; the loss of
+of ["Gimbal lock"](http://en.wikipedia.org/wiki/Gimbal_lock) — the loss of
 one degree of freedom caused by two axis on the same plane. You typically
 should use #graphene_euler_t to expose rotation angles in your API, or to
 store them, but use #graphene_quaternion_t to apply rotations to modelview
@@ -8077,10 +8078,10 @@ The matrix is treated as row-major, i.e. it has four vectors (x, y, z, and
 w) representing rows, and elements of each vector are a column:
 
 |[&lt;!-- language="plain" --&gt;
-  &#x23A1; m.x &#x23A4;    &#x239B; x.x  x.y  x.z  x.w &#x239E;
-  &#x239C; m.y &#x239F; -\ &#x239C; y.x  y.y  y.z  y.w &#x239F;
-  &#x239C; m.z &#x239F; -/ &#x239C; z.x  z.y  z.z  z.w &#x239F;
-  &#x23A3; m.w &#x23A6;    &#x239D; w.x  w.y  w.z  w.w &#x23A0;
+  ⎡ m.x ⎤    ⎛ x.x  x.y  x.z  x.w ⎞
+  ⎜ m.y ⎟ -\ ⎜ y.x  y.y  y.z  y.w ⎟
+  ⎜ m.z ⎟ -/ ⎜ z.x  z.y  z.z  z.w ⎟
+  ⎣ m.w ⎦    ⎝ w.x  w.y  w.z  w.w ⎠
 ]|
 
 It is possible to easily convert a #graphene_matrix_t to and from an array
@@ -8097,7 +8098,7 @@ matrices; in other words, given a matrix `A` and a vector `b`, the result
 of a multiplication is going to be:
 
 |[
-  res = b &#xD7; A
+  res = b × A
 ]|
 
 Multiplying two matrices, on the other hand, will use right-multiplication;
@@ -8105,17 +8106,17 @@ given two matrices `A` and `B`, the result of the multiplication is going
 to be
 
 |[
-  res = A &#xD7; B
+  res = A × B
 ]|
 
 as the implementation will multiply each row vector of matrix `A` with the
 matrix `B` to obtain the new row vectors of the result matrix:
 
 |[
-  res = &#x23A1; A.x &#xD7; B &#x23A4;
-        &#x239C; A.y &#xD7; B &#x239F;
-        &#x239C; A.z &#xD7; B &#x239F;
-        &#x23A3; A.w &#xD7; B &#x23A6;
+  res = ⎡ A.x × B ⎤
+        ⎜ A.y × B ⎟
+        ⎜ A.z × B ⎟
+        ⎣ A.w × B ⎦
 ]|
 
 For more information, see the documentation for #graphene_simd4x4f_t,
