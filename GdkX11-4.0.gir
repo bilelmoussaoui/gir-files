@@ -1,12 +1,13 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <include name="Gdk" version="4.0"/>
   <include name="xlib" version="2.0"/>
   <package name="gtk4-x11"/>
   <c:include name="gdk/x11/gdkx.h"/>
+  <doc:format name="gi-docgen"/>
   <namespace name="GdkX11" version="4.0" shared-library="libgtk-4.so.1" c:identifier-prefixes="Gdk" c:symbol-prefixes="gdk">
     <function-macro name="DISPLAY_XDISPLAY" c:identifier="GDK_DISPLAY_XDISPLAY" introspectable="0">
       <doc xml:space="preserve">Returns the display of a `GdkDisplay`.</doc>
@@ -179,7 +180,7 @@ returned.</doc>
           </parameter>
         </parameters>
       </function>
-      <function name="set_program_class" c:identifier="gdk_x11_display_set_program_class">
+      <function name="set_program_class" c:identifier="gdk_x11_display_set_program_class" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Sets the program class.
 
 The X11 backend uses the program class to set the class name part
@@ -198,7 +199,7 @@ of the `WM_CLASS` property on toplevel windows; see the ICCCM.</doc>
           </parameter>
         </parameters>
       </function>
-      <method name="broadcast_startup_message" c:identifier="gdk_x11_display_broadcast_startup_message" introspectable="0">
+      <method name="broadcast_startup_message" c:identifier="gdk_x11_display_broadcast_startup_message" introspectable="0" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Sends a startup notification message of type @message_type to
 @display.
 
@@ -228,13 +229,13 @@ skipped in the output.)</doc>
           </parameter>
         </parameters>
       </method>
-      <method name="error_trap_pop" c:identifier="gdk_x11_display_error_trap_pop">
+      <method name="error_trap_pop" c:identifier="gdk_x11_display_error_trap_pop" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Pops the error trap pushed by gdk_x11_display_error_trap_push().
 Will XSync() if necessary and will always block until
 the error is known to have occurred or not occurred,
 so the error code can be returned.
 
-If you don&#x2019;t need to use the return value,
+If you don’t need to use the return value,
 gdk_x11_display_error_trap_pop_ignored() would be more efficient.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">X error code or 0 on success</doc>
@@ -247,7 +248,7 @@ gdk_x11_display_error_trap_pop_ignored() would be more efficient.</doc>
           </instance-parameter>
         </parameters>
       </method>
-      <method name="error_trap_pop_ignored" c:identifier="gdk_x11_display_error_trap_pop_ignored">
+      <method name="error_trap_pop_ignored" c:identifier="gdk_x11_display_error_trap_pop_ignored" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Pops the error trap pushed by gdk_x11_display_error_trap_push().
 Does not block to see if an error occurred; merely records the
 range of requests to ignore errors for, and ignores those errors
@@ -262,7 +263,7 @@ if they arrive asynchronously.</doc>
           </instance-parameter>
         </parameters>
       </method>
-      <method name="error_trap_push" c:identifier="gdk_x11_display_error_trap_push">
+      <method name="error_trap_push" c:identifier="gdk_x11_display_error_trap_push" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Begins a range of X requests on @display for which X error events
 will be ignored. Unignored errors (when no trap is pushed) will abort
 the application. Use gdk_x11_display_error_trap_pop() or
@@ -278,7 +279,7 @@ with this function.</doc>
           </instance-parameter>
         </parameters>
       </method>
-      <method name="get_default_group" c:identifier="gdk_x11_display_get_default_group">
+      <method name="get_default_group" c:identifier="gdk_x11_display_get_default_group" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Returns the default group leader surface for all toplevel surfaces
 on @display. This surface is implicitly created by GDK.
 See gdk_x11_surface_set_group().</doc>
@@ -351,10 +352,10 @@ This function returns `NULL` if GDK is using GLX.</doc>
           </parameter>
         </parameters>
       </method>
-      <method name="get_primary_monitor" c:identifier="gdk_x11_display_get_primary_monitor">
+      <method name="get_primary_monitor" c:identifier="gdk_x11_display_get_primary_monitor" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Gets the primary monitor for the display.
 
-The primary monitor is considered the monitor where the &#x201C;main desktop&#x201D;
+The primary monitor is considered the monitor where the “main desktop”
 lives. While normal application surfaces typically allow the window
 manager to place the surfaces, specialized desktop applications
 such as panels should place themselves on the primary monitor.
@@ -373,7 +374,7 @@ If no monitor is the designated primary monitor, any monitor
           </instance-parameter>
         </parameters>
       </method>
-      <method name="get_screen" c:identifier="gdk_x11_display_get_screen">
+      <method name="get_screen" c:identifier="gdk_x11_display_get_screen" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Retrieves the `GdkX11Screen` of the @display.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">the `GdkX11Screen`</doc>
@@ -399,7 +400,7 @@ If no monitor is the designated primary monitor, any monitor
           </instance-parameter>
         </parameters>
       </method>
-      <method name="get_user_time" c:identifier="gdk_x11_display_get_user_time">
+      <method name="get_user_time" c:identifier="gdk_x11_display_get_user_time" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Returns the timestamp of the last user interaction on
 @display. The timestamp is taken from events caused
 by user interaction such as key presses or pointer
@@ -438,7 +439,7 @@ may even fall back to a few default cursors.</doc>
           </parameter>
         </parameters>
       </method>
-      <method name="get_xdisplay" c:identifier="gdk_x11_display_get_xdisplay">
+      <method name="get_xdisplay" c:identifier="gdk_x11_display_get_xdisplay" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Returns the X display of a `GdkDisplay`.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">an X display</doc>
@@ -451,7 +452,7 @@ may even fall back to a few default cursors.</doc>
           </instance-parameter>
         </parameters>
       </method>
-      <method name="get_xrootwindow" c:identifier="gdk_x11_display_get_xrootwindow">
+      <method name="get_xrootwindow" c:identifier="gdk_x11_display_get_xrootwindow" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Returns the root X window used by `GdkDisplay`.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">an X Window</doc>
@@ -464,7 +465,7 @@ may even fall back to a few default cursors.</doc>
           </instance-parameter>
         </parameters>
       </method>
-      <method name="get_xscreen" c:identifier="gdk_x11_display_get_xscreen">
+      <method name="get_xscreen" c:identifier="gdk_x11_display_get_xscreen" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Returns the X Screen used by `GdkDisplay`.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">an X Screen</doc>
@@ -477,7 +478,7 @@ may even fall back to a few default cursors.</doc>
           </instance-parameter>
         </parameters>
       </method>
-      <method name="grab" c:identifier="gdk_x11_display_grab">
+      <method name="grab" c:identifier="gdk_x11_display_grab" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Call XGrabServer() on @display.
 To ungrab the display again, use gdk_x11_display_ungrab().
 
@@ -553,7 +554,7 @@ gdk_display_notify_startup_complete()).</doc>
           </parameter>
         </parameters>
       </method>
-      <method name="set_surface_scale" c:identifier="gdk_x11_display_set_surface_scale">
+      <method name="set_surface_scale" c:identifier="gdk_x11_display_set_surface_scale" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Forces a specific window scale for all windows on this display,
 instead of using the default or user configured scale. This
 is can be used to disable scaling support by setting @scale to
@@ -654,7 +655,7 @@ nul-separated elements of the original text string.)</doc>
           </parameter>
         </parameters>
       </method>
-      <method name="ungrab" c:identifier="gdk_x11_display_ungrab">
+      <method name="ungrab" c:identifier="gdk_x11_display_ungrab" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Ungrab @display after it has been grabbed with
 gdk_x11_display_grab().</doc>
         <return-value transfer-ownership="none">
@@ -751,10 +752,10 @@ XFreeEventData() will be called afterwards.</doc>
         </parameters>
       </method>
       <method name="get_workarea" c:identifier="gdk_x11_monitor_get_workarea" deprecated="1" deprecated-version="4.18">
-        <doc xml:space="preserve">Retrieves the size and position of the &#x201C;work area&#x201D; on a monitor
+        <doc xml:space="preserve">Retrieves the size and position of the “work area” on a monitor
 within the display coordinate space.
 
-The returned geometry is in &#x201D;application pixels&#x201D;, not in &#x201D;device pixels&#x201D;
+The returned geometry is in ”application pixels”, not in ”device pixels”
 (see [method@Gdk.Monitor.get_scale_factor]).</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -777,7 +778,7 @@ The returned geometry is in &#x201D;application pixels&#x201D;, not in &#x201D;d
         <doc xml:space="preserve">Returns the current workspace for @screen when running under a
 window manager that supports multiple workspaces, as described
 in the
-[Extended Window Manager Hints](http://www.freedesktop.org/Standards/wm-spec) specification.</doc>
+[Extended Window Manager Hints](https://specifications.freedesktop.org/wm/latest/) specification.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">the current workspace, or 0 if workspaces are not supported</doc>
           <type name="guint32" c:type="guint32"/>
@@ -812,7 +813,7 @@ extension, 0 is returned.</doc>
         <doc xml:space="preserve">Returns the number of workspaces for @screen when running under a
 window manager that supports multiple workspaces, as described
 in the
-[Extended Window Manager Hints](http://www.freedesktop.org/Standards/wm-spec) specification.</doc>
+[Extended Window Manager Hints](https://specifications.freedesktop.org/wm/latest/) specification.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">the number of workspaces, or 0 if workspaces are not supported</doc>
           <type name="guint32" c:type="guint32"/>
@@ -869,10 +870,10 @@ and should not be freed.</doc>
       <method name="supports_net_wm_hint" c:identifier="gdk_x11_screen_supports_net_wm_hint" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">This function is specific to the X11 backend of GDK, and indicates
 whether the window manager supports a certain hint from the
-[Extended Window Manager Hints](http://www.freedesktop.org/Standards/wm-spec) specification.
+[Extended Window Manager Hints](https://specifications.freedesktop.org/wm/latest/) specification.
 
 When using this function, keep in mind that the window manager
-can change over time; so you shouldn&#x2019;t use this function in
+can change over time; so you shouldn’t use this function in
 a way that impacts persistent application state. A common bug
 is that your application can start up before the window manager
 does when the user logs in, and before the window manager starts
@@ -950,7 +951,7 @@ a window manager change.</doc>
       <method name="get_xid" c:identifier="gdk_x11_surface_get_xid" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Returns the X resource (surface) belonging to a `GdkSurface`.</doc>
         <return-value transfer-ownership="none">
-          <doc xml:space="preserve">the ID of @drawable&#x2019;s X resource.</doc>
+          <doc xml:space="preserve">the ID of @drawable’s X resource.</doc>
           <type name="xlib.Window" c:type="gulong"/>
         </return-value>
         <parameters>
@@ -963,7 +964,7 @@ a window manager change.</doc>
       <method name="move_to_current_desktop" c:identifier="gdk_x11_surface_move_to_current_desktop" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Moves the surface to the correct workspace when running under a
 window manager that supports multiple workspaces, as described
-in the [Extended Window Manager Hints](http://www.freedesktop.org/Standards/wm-spec) specification.
+in the [Extended Window Manager Hints](https://specifications.freedesktop.org/wm/latest/) specification.
 Will not do anything if the surface is already on all workspaces.</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -978,7 +979,7 @@ Will not do anything if the surface is already on all workspaces.</doc>
       <method name="move_to_desktop" c:identifier="gdk_x11_surface_move_to_desktop" deprecated="1" deprecated-version="4.18">
         <doc xml:space="preserve">Moves the surface to the given workspace when running unde a
 window manager that supports multiple workspaces, as described
-in the [Extended Window Manager Hints](http://www.freedesktop.org/Standards/wm-spec) specification.</doc>
+in the [Extended Window Manager Hints](https://specifications.freedesktop.org/wm/latest/) specification.</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
         </return-value>
@@ -1329,7 +1330,7 @@ to convert the argument back to an XID.</doc>
       <return-value transfer-ownership="none" nullable="1">
         <doc xml:space="preserve">The
   `GdkDevice` wrapping the device ID, or %NULL if the given ID
-  doesn&#x2019;t currently represent a device.</doc>
+  doesn’t currently represent a device.</doc>
         <type name="X11DeviceXI2" c:type="GdkDevice*"/>
       </return-value>
       <parameters>
@@ -1407,11 +1408,11 @@ faster than XInternAtom(), which is a round trip to the server each time.</doc>
     <function name="x11_get_xatom_name_for_display" c:identifier="gdk_x11_get_xatom_name_for_display" deprecated="1" deprecated-version="4.18">
       <doc xml:space="preserve">Returns the name of an X atom for its display. This
 function is meant mainly for debugging, so for convenience, unlike
-XAtomName() and the result doesn&#x2019;t need to
+XAtomName() and the result doesn’t need to
 be freed.</doc>
       <return-value transfer-ownership="none">
         <doc xml:space="preserve">name of the X atom; this string is owned by GDK,
-  so it shouldn&#x2019;t be modified or freed.</doc>
+  so it shouldn’t be modified or freed.</doc>
         <type name="utf8" c:type="const char*"/>
       </return-value>
       <parameters>
@@ -1425,7 +1426,7 @@ be freed.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="x11_lookup_xdisplay" c:identifier="gdk_x11_lookup_xdisplay">
+    <function name="x11_lookup_xdisplay" c:identifier="gdk_x11_lookup_xdisplay" deprecated="1" deprecated-version="4.18">
       <doc xml:space="preserve">Find the `GdkDisplay` corresponding to @xdisplay, if any exists.</doc>
       <return-value transfer-ownership="none">
         <doc xml:space="preserve">the `GdkDisplay`, if found, otherwise %NULL.</doc>
@@ -1438,9 +1439,9 @@ be freed.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="x11_set_sm_client_id" c:identifier="gdk_x11_set_sm_client_id">
-      <doc xml:space="preserve">Sets the `SM_CLIENT_ID` property on the application&#x2019;s leader window so that
-the window manager can save the application&#x2019;s state using the X11R6 ICCCM
+    <function name="x11_set_sm_client_id" c:identifier="gdk_x11_set_sm_client_id" deprecated="1" deprecated-version="4.18">
+      <doc xml:space="preserve">Sets the `SM_CLIENT_ID` property on the application’s leader window so that
+the window manager can save the application’s state using the X11R6 ICCCM
 session management protocol.
 
 See the X Session Management Library documentation for more information on
